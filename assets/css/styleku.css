@@ -1,0 +1,93 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product .buy {
+    background-color: #106eea;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product .buy:hover {
+    background-color: #005f7f;
+}
+
+.button {
+
+    display: inline-block;
+    background-color: #106eea;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #005f7f;
+    cursor: pointer;
+}
+
+.baru {
+    text-align: center;
+}
+
+.detail {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.product .detail:hover {
+    background-color: #106eea;
+}
+
+.thank-you {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.thank-you h2 {
+    margin-bottom: 0.5em;
+}
+
+.thank-you p {
+    margin: 1em 0;
+}
