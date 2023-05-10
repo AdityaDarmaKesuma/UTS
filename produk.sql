@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2023 at 10:12 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: May 10, 2023 at 11:59 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `toko`
+-- Database: `produk`
 --
 
 -- --------------------------------------------------------
@@ -30,15 +30,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `kategori_produk` (
   `id` int(11) NOT NULL,
   `nama` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `kategori_produk`
 --
 
 INSERT INTO `kategori_produk` (`id`, `nama`) VALUES
-(2, 'Fashion'),
-(1, 'Elektronik');
+(1, 'Elektronik'),
+(2, 'Fashion');
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE `pesanan` (
   `jumlah_pesanan` int(11) NOT NULL,
   `deskripsi` text NOT NULL,
   `produk_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pesanan`
@@ -81,23 +81,22 @@ CREATE TABLE `produk` (
   `min_stok` int(11) NOT NULL,
   `deskripsi` text NOT NULL,
   `kategori_produk_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id`, `kode`, `nama`, `harga_jual`, `harga_beli`, `stok`, `min_stok`, `deskripsi`, `kategori_produk_id`) VALUES
-(1, 'AC01', 'AC', 4000000, 3500000, 10, 5, 'AC atau air conditioner merupakan perangkat elektronik yang berfungsi sebagai pendingin ruangan ini menjadi solusi jitu mengatasi udara yang panas.', 1),
-(2, 'HP01', 'HANDPHONE', 2000000, 1500000, 6, 2, 'Handphone adalah perangkat elektronik kecil yang digunakan untuk komunikasi nirkabel.', 1),
-(3, 'LP01', 'LAPTOP', 5000000, 4500000, 5, 2, 'Laptop adalah sebuah komputer portabel yang dapat dibawa-bawa dan digunakan di mana saja.', 1),
-(4, 'RC01', 'RICECOOKER', 500000, 450000, 10, 5, 'Rice cooker adalah perangkat listrik yang dirancang khusus untuk memasak nasi dengan cara mengukusnya.', 1),
-(5, 'KA01', 'KIPAS ANGIN', 450000, 300000, 12, 6, 'Kipas angin adalah perangkat elektronik yang digunakan untuk menghasilkan aliran udara dengan cara memutar baling-baling yang terpasang pada poros yang dihubungkan ke motor listrik.', 1),
-(6, 'ST01', 'SETRIKA', 400000, 350000, 7, 3, 'Setrika adalah perangkat listrik yang digunakan untuk meluruskan kain dan menghilangkan kerutan dengan cara memanaskan plat setrika dan menyetrikannya di atas kain.', 1),
-(7, 'BL01', 'BLENDER', 250000, 200000, 10, 5, 'Blender adalah alat dapur yang digunakan untuk mencampur, menghaluskan, atau menghancurkan bahan makanan atau bahan lainnya.', 1),
-(8, 'KR01', 'KAMERA', 8000000, 7000000, 4, 2, 'Kamera adalah perangkat elektronik yang digunakan untuk menangkap gambar atau video dengan cara merekam cahaya yang melewati lensa dan memprosesnya menjadi gambar atau video yang dapat disimpan dalam berbagai format digital.', 1),
-(9, 'WM01', 'MICROWAVE', 1000000, 950000, 10, 4, 'Microwave atau oven microwave adalah perangkat elektronik yang digunakan untuk memasak makanan dengan memanfaatkan gelombang mikro yang meresap ke dalam bahan makanan dan memanaskan atau memasaknya secara cepat.', 1),
-(10, 'KL01', 'KULKAS', 9000000, 7000000, 12, 7, 'Kulkas atau lemari es adalah perangkat elektronik yang digunakan untuk mendinginkan dan menyimpan makanan dan minuman dalam suhu yang rendah.', 1);
+(1, 'AC1', 'AC', 4000000, 3500000, 10, 5, 'AC', 1),
+(2, 'HP1', 'HANDPHONE', 2000000, 1500000, 6, 2, 'HP', 1),
+(3, 'LP1', 'LAPTOP', 5000000, 4500000, 10, 2, 'LAPTOP', 1),
+(4, 'RC1', 'RICECOOKER', 500000, 450000, 12, 4, 'RICECOOKER', 1),
+(5, 'KA1', 'KIPAS ANGIN', 450000, 400000, 12, 5, 'KIPAS ANGIN', 1),
+(6, 'ST1', 'SETRIKA', 400000, 350000, 12, 6, 'SETRIKA', 1),
+(7, 'BL1', 'BLENDER', 250000, 200000, 10, 3, 'BLENDER', 1),
+(8, 'KM1', 'KAMERA', 8000000, 7000000, 5, 1, 'KAMERA', 1),
+(9, 'KL1', 'KULKAS', 9000000, 8000000, 7, 1, 'KULKAS', 1);
 
 --
 -- Indexes for dumped tables
@@ -134,7 +133,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `kategori_produk`
 --
 ALTER TABLE `kategori_produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pesanan`
@@ -146,7 +145,7 @@ ALTER TABLE `pesanan`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
