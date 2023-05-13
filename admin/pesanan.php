@@ -37,8 +37,8 @@ $rs = $dbh->query($sql);
                                 <th scope="col">Nama Lengkap</th>
                                 <th scope="col">Alamat Lengkap</th>
                                 <th scope="col">Tanggal Pembelian</th>
-                                <th scope="col">email</th>
-                                <th scope="col">No.Hp</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">No.HP</th>
                                 <th scope="col">Catatan</th>
                                 <th scope="col">Produk</th>
                                 <th scope="col">Jumlah</th>
@@ -48,11 +48,11 @@ $rs = $dbh->query($sql);
                             <tr>
                                 <td>1</td>
                                 <td>Aditya Darma Kesuma</td>
-                                <td>Jl.swadaya1</td>
+                                <td>jl.Swadaya I</td>
                                 <td>2023-03-23</td>
                                 <td>adityadarmakesuma@gmail.com</td>
                                 <td>082173203372</td>
-                                <td>gakpapa aku ikhlas</td>
+                                <td>Mantab Bang</td>
                                 <td>AC</td>
                                 <td>1</td>
                             </tr>

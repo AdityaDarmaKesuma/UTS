@@ -11,8 +11,8 @@ require_once "sidebar.php";
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Dashboard Website</h1>
-                    <h1>Aditya Darma Kesuma - TI01 - 011022022</h1>
+                    <h1>Selamat Datang di Dashboard Website</h1>
+                    <h1>Aditya Darma Kesuma - TI01 - 0110222022</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->

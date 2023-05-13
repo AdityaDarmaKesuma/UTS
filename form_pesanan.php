@@ -1,6 +1,6 @@
 <?php require_once "atas.php" ?>
 <section>
-<form action="proses_pemesanan.php" method="POST" class="order-form">
+<form action="thanks.php" method="POST" class="order-form">
     <h2 class="baru"> Form Pemesanan </h2>
     <div class="form-group">
         <label for="nama"> Nama Lengkap </label>
